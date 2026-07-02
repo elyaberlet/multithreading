@@ -65,7 +65,7 @@ public class Station {
     }
 
     public void unloadWagons(int count) throws InterruptedException {
-        warehouseLock.lock();  // Захватываем замок склада
+        warehouseLock.lock();
         try {
             while (wagonsOnStation + count > warehouseCapacity) {
                 logger.debug("Warehouse full ({}/{}). Train is waiting to unload {} wagons.",

@@ -22,10 +22,9 @@ public class Main {
 
         try {
             List<String> lines = reader.readAllLines(filePath);
-            boolean hasData = lines.size() > 1;
 
-            if (hasData) {
-                String firstLine = lines.get(0);
+            if (lines.size() > 1) {
+                String firstLine = lines.getFirst();
                 String[] stationParams = firstLine.split(" ");
                 int tracksCount = Integer.parseInt(stationParams[0]);
                 int warehouseCapacity = Integer.parseInt(stationParams[1]);
