@@ -45,9 +45,7 @@ public class Train implements Callable<String> {
     }
 
     public void setState(BaseTrainState state) {
-        if (state != null) {
             this.state = state;
-        }
     }
 
     public BaseTrainState getState() {
